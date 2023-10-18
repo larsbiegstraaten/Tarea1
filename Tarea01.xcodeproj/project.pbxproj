@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A85AF55C2ADFC01C00B23A3F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85AF55B2ADFC01C00B23A3F /* GameViewController.swift */; };
 		A8F14C092ADEA99100EE75AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F14C082ADEA99100EE75AB /* AppDelegate.swift */; };
 		A8F14C0B2ADEA99100EE75AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F14C0A2ADEA99100EE75AB /* SceneDelegate.swift */; };
 		A8F14C0D2ADEA99100EE75AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F14C0C2ADEA99100EE75AB /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A85AF55B2ADFC01C00B23A3F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A8F14C052ADEA99100EE75AB /* Tarea01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarea01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F14C082ADEA99100EE75AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8F14C0A2ADEA99100EE75AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				A8F14C112ADEA99B00EE75AB /* Assets.xcassets */,
 				A8F14C132ADEA99B00EE75AB /* LaunchScreen.storyboard */,
 				A8F14C162ADEA99B00EE75AB /* Info.plist */,
+				A85AF55B2ADFC01C00B23A3F /* GameViewController.swift */,
 			);
 			path = Tarea01;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A85AF55C2ADFC01C00B23A3F /* GameViewController.swift in Sources */,
 				A8F14C0D2ADEA99100EE75AB /* ViewController.swift in Sources */,
 				A8F14C092ADEA99100EE75AB /* AppDelegate.swift in Sources */,
 				A8F14C0B2ADEA99100EE75AB /* SceneDelegate.swift in Sources */,
