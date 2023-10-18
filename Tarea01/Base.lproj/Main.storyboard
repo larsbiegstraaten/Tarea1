@@ -70,6 +70,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="bUP-C8-S24"/>
                     <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="bigImageView" destination="Zwe-HT-3ZR" id="D4g-mW-qFh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKw-mf-YkZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
