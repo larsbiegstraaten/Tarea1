@@ -10,14 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        logoImageView.image = UIImage(named: "logo")
+    }
+    
     @IBAction func startButton(_ sender: UIButton) {
         performSegue(withIdentifier: "goToGame", sender: nil)
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
 
 }
 

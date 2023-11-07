@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A827376F2AE67F83005806E0 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827376E2AE67F83005806E0 /* ResultsViewController.swift */; };
 		A85AF55C2ADFC01C00B23A3F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85AF55B2ADFC01C00B23A3F /* GameViewController.swift */; };
+		A8850EC22AE113A8006005B1 /* GameResolutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8850EC12AE113A8006005B1 /* GameResolutionViewController.swift */; };
+		A896BD512AE91CA9008862EE /* resul.swift in Sources */ = {isa = PBXBuildFile; fileRef = A896BD502AE91CA9008862EE /* resul.swift */; };
+		A896BD542AE91E98008862EE /* cellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A896BD532AE91E98008862EE /* cellView.swift */; };
 		A8F14C092ADEA99100EE75AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F14C082ADEA99100EE75AB /* AppDelegate.swift */; };
 		A8F14C0B2ADEA99100EE75AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F14C0A2ADEA99100EE75AB /* SceneDelegate.swift */; };
 		A8F14C0D2ADEA99100EE75AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F14C0C2ADEA99100EE75AB /* ViewController.swift */; };
@@ -17,7 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A827376E2AE67F83005806E0 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		A85AF55B2ADFC01C00B23A3F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		A8850EC12AE113A8006005B1 /* GameResolutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResolutionViewController.swift; sourceTree = "<group>"; };
+		A896BD502AE91CA9008862EE /* resul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resul.swift; sourceTree = "<group>"; };
+		A896BD532AE91E98008862EE /* cellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellView.swift; sourceTree = "<group>"; };
 		A8F14C052ADEA99100EE75AB /* Tarea01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarea01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F14C082ADEA99100EE75AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8F14C0A2ADEA99100EE75AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +50,9 @@
 		A8F14BFC2ADEA99100EE75AB = {
 			isa = PBXGroup;
 			children = (
+				A896BD502AE91CA9008862EE /* resul.swift */,
+				A896BD532AE91E98008862EE /* cellView.swift */,
+				A827376E2AE67F83005806E0 /* ResultsViewController.swift */,
 				A8F14C072ADEA99100EE75AB /* Tarea01 */,
 				A8F14C062ADEA99100EE75AB /* Products */,
 			);
@@ -66,6 +77,7 @@
 				A8F14C132ADEA99B00EE75AB /* LaunchScreen.storyboard */,
 				A8F14C162ADEA99B00EE75AB /* Info.plist */,
 				A85AF55B2ADFC01C00B23A3F /* GameViewController.swift */,
+				A8850EC12AE113A8006005B1 /* GameResolutionViewController.swift */,
 			);
 			path = Tarea01;
 			sourceTree = "<group>";
@@ -140,10 +152,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8850EC22AE113A8006005B1 /* GameResolutionViewController.swift in Sources */,
 				A85AF55C2ADFC01C00B23A3F /* GameViewController.swift in Sources */,
+				A896BD512AE91CA9008862EE /* resul.swift in Sources */,
 				A8F14C0D2ADEA99100EE75AB /* ViewController.swift in Sources */,
+				A896BD542AE91E98008862EE /* cellView.swift in Sources */,
 				A8F14C092ADEA99100EE75AB /* AppDelegate.swift in Sources */,
 				A8F14C0B2ADEA99100EE75AB /* SceneDelegate.swift in Sources */,
+				A827376F2AE67F83005806E0 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
