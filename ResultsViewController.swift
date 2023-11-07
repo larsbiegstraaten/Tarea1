@@ -116,9 +116,8 @@ class ResultsViewController: UIViewController, UITableViewDataSource {
         return url
     }
     func retrieveData(){
-        var request = URLRequest(url: url!)
-        request.httpMethod = "GET"
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let request = URL(string: generateURL())
+        let task = URLSession.shared.dataTask(with: request!) { data, response, error in
             if let error = error {
                 print("Error: \(error)")
                 return
@@ -130,6 +129,9 @@ class ResultsViewController: UIViewController, UITableViewDataSource {
                     print("Response: \(jsonResponse)")
                     if let jsonArray = jsonResponse as? [[String: Any]] {
                         // cojer todas las entradas que tengan el id que me he guardado
+                  //      var name = jsonArray[]["name"]
+                            print("Hola")
+                            print(jsonArray[0]["name"])
                     }
                 } catch {
                     print("Error: \(error)")
