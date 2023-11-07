@@ -1,7 +1,7 @@
 
 import Foundation
 
-class result {
+class HighScore {
     var name: String
     var score: Int
     

@@ -11,11 +11,11 @@ class ResultsViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var nameTextField: UITextField!
     var userName = ""
-    var highScores: [result] = []
+    var highScores: [HighScore] = []
     let currentHighScore = UserDefaults.standard.integer(forKey: "highscore")
     var body = ""
     let url = URL(string: "https://api.restful-api.dev/objects")
-    var ids: [String] = []
+    var ids: [String] = ["ff8081818b8f5d07018ba9c024611a55"]
     
     
     
@@ -40,7 +40,7 @@ class ResultsViewController: UIViewController, UITableViewDataSource {
         cell.nameLabel.text = highScores[indexPath.row].name
         cell.scoreLabel.text = highScores[indexPath.row].score.description
         // obtener los datos de la API y ordenar de mayor a menor
-        highScores = []
+
         return cell
     }
     func saveHighscore(finalScore: Int, userName: String) {
@@ -53,15 +53,13 @@ class ResultsViewController: UIViewController, UITableViewDataSource {
             saveHighscore(finalScore: finalScore, userName: nameTextField.text!)
         }
         userName = nameTextField.text!
-        generatePostURL()
-        retrieveData()
-        updateData()
-        
         botonSaveHigh.isEnabled = false
+        postHighScore()
+        
+
     }
     
-    func updateData(){
-        highScores.append(result(finalScore , nameTextField.text ?? "xxxx"))
+    func reOrderData(){
         highScores.sort { (result1, result2) -> Bool in
             
             return result1.score > result2.score
@@ -69,7 +67,7 @@ class ResultsViewController: UIViewController, UITableViewDataSource {
         highScoresTableView.reloadData()
     }
     
-    func generatePostURL(){
+    func postHighScore(){
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -97,6 +95,9 @@ class ResultsViewController: UIViewController, UITableViewDataSource {
                     let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
                     let id = jsonResponse!["id"] as? String
                     self.ids.append(id!)
+                    self.reOrderData()
+
+                    self.retrieveData()
                     print("Response: \(String(describing: jsonResponse))")
                 } catch {
                     print("Error: \(error)")
@@ -108,13 +109,16 @@ class ResultsViewController: UIViewController, UITableViewDataSource {
         
     }
     func generateURL() -> String {
-        var url = "https://api.restful-api.dev/objects"
+        var url = "https://api.restful-api.dev/objects?"
         for id in ids {
             url += "id=" + id + "&"
         }
         url.removeLast()
         return url
     }
+    
+    
+    
     func retrieveData(){
         let request = URL(string: generateURL())
         let task = URLSession.shared.dataTask(with: request!) { data, response, error in
@@ -128,10 +132,15 @@ class ResultsViewController: UIViewController, UITableViewDataSource {
                     let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
                     print("Response: \(jsonResponse)")
                     if let jsonArray = jsonResponse as? [[String: Any]] {
-                        // cojer todas las entradas que tengan el id que me he guardado
-                  //      var name = jsonArray[]["name"]
-                            print("Hola")
-                            print(jsonArray[0]["name"])
+                            
+                        for highScore in jsonArray{
+                            let name1 = highScore["name"] as? String
+                            let data1 = highScore["data"] as? [String: Any]
+                            let score1 = data1?["highScore"] as? Int
+                            let result1 = HighScore(score1! , name1!)
+                            self.highScores.append(result1)
+                            print(result1)
+                        }
                     }
                 } catch {
                     print("Error: \(error)")
